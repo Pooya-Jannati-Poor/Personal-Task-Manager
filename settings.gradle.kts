@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Personal Task Manager"
 include(":app")
- 
+include(":domain")
+include(":data")
+include(":presentation")
