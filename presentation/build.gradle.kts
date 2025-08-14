@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.androidx.navigation.safeargs)
+    alias(libs.plugins.google.devtools.ksp)
 }
 
 android {
@@ -56,5 +57,12 @@ dependencies {
     implementation(libs.androidx.lifecycle.common.java8)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.arch.lifecycle.extensions)
+
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+
+    //Calligraphy          //https://github.com/InflationX/Calligraphy
+    implementation(libs.calligraphy3)
+    implementation(libs.viewpump)
 
 }
