@@ -8,8 +8,8 @@ import ir.pooyadev.domain.repository.local.TaskRepository
 import ir.pooyadev.domain.repository.local.UserPreferencesRepository
 import ir.pooyadev.domain.usecases.local.DeleteTaskUseCase
 import ir.pooyadev.domain.usecases.local.FetchTasksByTaskIdUseCase
-import ir.pooyadev.domain.usecases.local.FetchTasksUseCase
 import ir.pooyadev.domain.usecases.local.FetchSortedTasksFirstUseCase
+import ir.pooyadev.domain.usecases.local.InsertOrUpdateTaskUseCase
 import ir.pooyadev.domain.usecases.local.SyncTasksUseCase
 import ir.pooyadev.domain.usecases.local.UpdateTaskUseCase
 
@@ -23,8 +23,8 @@ object TaskUseCasesModule {
     }
 
     @Provides
-    fun provideFetchTasksUseCase(taskRepository: TaskRepository): FetchTasksUseCase {
-        return FetchTasksUseCase(taskRepository)
+    fun provideFetchSortedTasksFirstUseCase(taskRepository: TaskRepository, userPreferencesRepository: UserPreferencesRepository): FetchSortedTasksFirstUseCase {
+        return FetchSortedTasksFirstUseCase(taskRepository, userPreferencesRepository)
     }
 
     @Provides
