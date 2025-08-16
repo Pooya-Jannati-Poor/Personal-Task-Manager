@@ -67,7 +67,10 @@ dependencies {
     //WorkManager
     implementation(libs.androidx.work.runtime.ktx)
 
-    //Calligraphy          //https://github.com/InflationX/Calligraphy
+    // Coroutine
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
     //Calligraphy
     implementation(libs.calligraphy3)
     implementation(libs.viewpump)

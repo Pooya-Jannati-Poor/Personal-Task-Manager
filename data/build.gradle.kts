@@ -49,12 +49,23 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.room.compiler)
 
+    // retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.squareup.moshi)
+    implementation(libs.retrofit2.converter.moshi)
+    ksp(libs.moshi.kotlin.codegen)
+    implementation(libs.logging.interceptor)
+
     //Hilt
     implementation(libs.androidx.hilt.work)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     ksp(libs.dagger.hilt.compiler)
 
+    //DataStore
+    implementation(libs.androidx.datastore.preferences)
 
     //WorkManager
     implementation(libs.androidx.work.runtime.ktx)
