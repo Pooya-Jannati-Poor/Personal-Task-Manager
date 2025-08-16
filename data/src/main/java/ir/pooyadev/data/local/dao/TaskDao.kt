@@ -11,8 +11,8 @@ import ir.pooyadev.data.local.entities.TaskEntity
 @Dao
 interface TaskDao {
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertTask(task: TaskEntity): Long
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdateTask(task: TaskEntity): Long
 
     @Query("SELECT * FROM task_table ORDER BY taskUpdatedAt ASC")
     suspend fun fetchTasks(): List<TaskEntity>?
