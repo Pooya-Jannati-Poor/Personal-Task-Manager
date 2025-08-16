@@ -1,6 +1,7 @@
 package ir.pooyadev.domain.repository.local
 
 import ir.pooyadev.domain.model.local.Task
+import ir.pooyadev.domain.model.remote.RemoteResult
 import kotlinx.coroutines.flow.Flow
 
 interface TaskRepository {
@@ -18,5 +19,7 @@ interface TaskRepository {
     suspend fun deleteTask(task: Task): Int
 
     suspend fun clearAllDataTables()
+
+    suspend fun syncTasks(): RemoteResult<Unit>
 
 }
