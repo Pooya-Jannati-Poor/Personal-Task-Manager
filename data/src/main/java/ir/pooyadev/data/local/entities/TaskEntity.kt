@@ -10,8 +10,8 @@ data class TaskEntity(
     val id: Long = 0,
     val taskTitle: String,
     val taskDescription: String,
-    val taskUpdatedAt: Long,
     val taskAlarmDate: Long?,
+    val taskCreatedAt: Long,
 ) {
     fun toDomain(): Task {
         return Task(
@@ -19,7 +19,7 @@ data class TaskEntity(
             taskTitle = this.taskTitle,
             taskDescription = this.taskDescription,
             taskAlarmDate = this.taskAlarmDate,
-            taskUpdatedAt = this.taskUpdatedAt
+            taskCreatedAt = this.taskCreatedAt
         )
     }
 
@@ -30,7 +30,7 @@ data class TaskEntity(
                 taskTitle = task.taskTitle,
                 taskDescription = task.taskDescription,
                 taskAlarmDate = task.taskAlarmDate,
-                taskUpdatedAt = task.taskUpdatedAt
+                taskCreatedAt = task.taskCreatedAt
             )
         }
     }
