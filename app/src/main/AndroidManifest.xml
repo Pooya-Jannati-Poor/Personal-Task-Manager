@@ -22,6 +22,12 @@
             android:authorities="${applicationId}.androidx-startup"
             tools:node="remove">
         </provider>
+
+        <receiver
+            android:name="ir.pooyadev.data.receiver.reminder.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity
             android:name="ir.pooyadev.presentation.view.activity.MainActivity"
             android:exported="true">
