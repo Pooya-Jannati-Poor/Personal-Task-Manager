@@ -17,11 +17,9 @@ class TaskLastItemMarginDecoration (
         val itemCount = state.itemCount
 
         if (position == itemCount - 1) {
-            // آخرین آیتم → margin صفر
             val lastItemMarginPx = (26 * parent.context.resources.displayMetrics.density).toInt()
             outRect.bottom = lastItemMarginPx
         } else {
-            // بقیه آیتم‌ها → margin معمولی
             outRect.bottom = margin
         }
     }

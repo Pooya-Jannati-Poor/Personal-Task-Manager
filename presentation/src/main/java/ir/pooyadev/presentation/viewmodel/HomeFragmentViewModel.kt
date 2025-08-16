@@ -60,14 +60,11 @@ class HomeFragmentViewModel @Inject constructor(
             _uiState.value = TaskUiState.Loading
             when (val result = syncTasksUseCase.invoke()) {
                 is RemoteResult.Error -> {
-                    Log.d("syncData", "syncData: failed")
                     _uiState.value = TaskUiState.Error(result.message ?: "An unknown error occurred")
                 }
                 is RemoteResult.Success -> {
-                    Log.d("syncData", "syncData: success")
                 }
                 else -> {
-                    Log.d("syncData", "syncData: loading")
                 }
             }
         }

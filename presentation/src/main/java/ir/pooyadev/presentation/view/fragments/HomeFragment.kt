@@ -59,13 +59,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                     Toast.LENGTH_LONG
                 ).show()
             }
-            Log.d("resid", "resid:1 ")
             checkExactAlarmPermission()
         }
 
     private val settingsLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            Log.d("resid", "resid:2 ")
             startDataFlow()
         }
 
@@ -190,7 +188,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                     is TaskUiState.Empty -> {
                         bindingFragment.recTasks.isVisible = false
                         bindingFragment.tvEmptyTaskList.isVisible = true
-                        adapterRecTask.setInitialTasks(arrayListOf()) // خالی کردن آداپتور
+                        adapterRecTask.setInitialTasks(arrayListOf())
                     }
 
                     is TaskUiState.Error -> {
