@@ -4,7 +4,7 @@ import ir.pooyadev.domain.model.local.Task
 
 interface TaskRepository {
 
-    suspend fun insertTask(task: Task): Long
+    suspend fun insertOrUpdateTask(task: Task): Long
 
     suspend fun fetchTasks(): List<Task>?
 
