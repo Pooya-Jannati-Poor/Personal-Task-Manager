@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import ir.pooyadev.data.local.entities.TaskEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TaskDao {
@@ -14,8 +15,11 @@ interface TaskDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrUpdateTask(task: TaskEntity): Long
 
-    @Query("SELECT * FROM task_table ORDER BY taskUpdatedAt ASC")
-    suspend fun fetchTasks(): List<TaskEntity>?
+    @Query("SELECT * FROM task_table ORDER BY taskCreatedAt DESC")
+    fun fetchTasksSortByNewestFirst(): Flow<List<TaskEntity>>
+
+    @Query("SELECT * FROM task_table ORDER BY taskCreatedAt ASC")
+    fun fetchTasksSortByOldestFirst(): Flow<List<TaskEntity>>
 
     @Query("SELECT * FROM task_table WHERE id = :taskId")
     suspend fun fetchTasksByTaskId(taskId: Long): TaskEntity?
