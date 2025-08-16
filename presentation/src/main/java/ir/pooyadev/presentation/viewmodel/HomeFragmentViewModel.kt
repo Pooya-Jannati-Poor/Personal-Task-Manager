@@ -1,7 +1,6 @@
 package ir.pooyadev.presentation.viewmodel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import ir.pooyadev.domain.model.local.SortOrder
