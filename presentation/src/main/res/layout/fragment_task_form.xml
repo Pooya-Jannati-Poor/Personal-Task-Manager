@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ghost_white"
+        android:orientation="vertical"
+        android:padding="12dp"
+        tools:context=".view.fragments.TaskFormFragment">
+
+        <TextView
+            android:id="@+id/tvTaskFormTitle"
+            fontPath="fonts/outfitsemibold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:drawablePadding="16dp"
+            android:text="@string/add_new_task"
+            android:textColor="@color/gunmetal_blue"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_arrow" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edLayoutTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/task_title"
+            android:textColorHint="@color/slate_gray"
+            android:textSize="14sp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/text_input_stroke_color"
+            app:boxStrokeErrorColor="@color/bright_red"
+            app:boxStrokeWidth="1dp"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/bright_red">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:textColor="@color/gunmetal_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edLayoutTaskDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/task_description"
+            android:textColorHint="@color/slate_gray"
+            android:textSize="14sp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/text_input_stroke_color"
+            app:boxStrokeErrorColor="@color/bright_red"
+            app:boxStrokeWidth="1dp"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/bright_red">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edTaskDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minHeight="120dp"
+                android:textColor="@color/gunmetal_blue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:text="@string/reminder"
+                android:textColor="@color/gunmetal_blue"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_reminder" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:checked="false"
+                android:textColor="@color/gunmetal_blue"
+                app:thumbTint="@color/switch_thumb_tint"
+                app:trackDecoration="@color/transparent"
+                app:trackTint="@color/switch_track_tint" />
+
+        </LinearLayout>
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveTask"
+            fontPath="fonts/outfitsemibold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/medium_orchid"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:isScrollContainer="true"
+            android:text="@string/save_task"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornerRadius="8dp" />
+
+
+    </LinearLayout>
+
+</layout>
