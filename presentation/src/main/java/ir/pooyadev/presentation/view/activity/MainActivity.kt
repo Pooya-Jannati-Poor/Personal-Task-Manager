@@ -1,11 +1,13 @@
 package ir.pooyadev.presentation.view.activity
 
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import dagger.hilt.android.AndroidEntryPoint
+import io.github.inflationx.viewpump.ViewPumpContextWrapper
 import ir.pooyadev.presentation.R
 
 @AndroidEntryPoint
@@ -20,4 +22,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase!!))
+    }
+
 }
