@@ -1,7 +1,10 @@
 [versions]
 agp = "8.12.0"
+calligraphy3 = "3.1.1"
 hiltAndroid = "2.56.2"
 hiltAndroidCompiler = "2.56.2"
+hiltCompilerVersion = "1.2.0"
+hiltWork = "1.2.0"
 navigationSafeArgs = "2.9.3"
 devtoolsKsp = "2.1.0-1.0.29"
 kotlin = "2.1.0"
@@ -21,6 +24,8 @@ navigationUiKtx = "2.9.3"
 roomCompiler = "2.7.2"
 roomRuntime = "2.7.2"
 roomKtx = "2.7.2"
+viewpump = "2.0.3"
+workRuntimeKtx = "2.10.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,8 +36,12 @@ androidx-arch-lifecycle-extensions = { module = "android.arch.lifecycle:extensio
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
+calligraphy3 = { module = "io.github.inflationx:calligraphy3", version.ref = "calligraphy3" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompilerVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -49,4 +58,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigationSafeArgs" }
 google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "devtoolsKsp" }
+dagger_hilt_android = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 
