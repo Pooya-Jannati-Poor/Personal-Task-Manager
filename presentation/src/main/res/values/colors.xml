@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="mint_green">#DEFDEC</color>
+    <color name="gunmetal_blue">#1D2433</color>
+    <color name="slate_gray">#767A83</color>
+    <color name="ghost_white">#F8F9FC</color>
+    <color name="medium_turquoise">#55D8C1</color>
+    <color name="lavender_gray">#E1E6EF</color>
+    <color name="transparent">#00000000</color>
+    <color name="medium_orchid">#AB46D2</color>
+    <color name="bright_red">#FF2828</color>
 </resources>
