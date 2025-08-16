@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Personal Task Manager</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tasks_list">Tasks List</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="empty_task_list">Empty Task List</string>
+    <string name="search_your_note_hint">Search your note</string>
+    <string name="task_title">Task title</string>
+    <string name="task_description">Describe your task …</string>
+    <string name="save_task">Save task</string>
+    <string name="reminder">Reminder</string>
+    <string name="required">required</string>
+    <string name="sort">Sort</string>
+    <string name="sort_by_newest">Sort by newest</string>
+    <string name="sort_by_oldest">Sort by oldest</string>
 </resources>
