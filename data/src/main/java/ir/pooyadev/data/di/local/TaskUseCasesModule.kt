@@ -9,6 +9,7 @@ import ir.pooyadev.domain.usecases.local.DeleteTaskUseCase
 import ir.pooyadev.domain.usecases.local.FetchTasksByTaskIdUseCase
 import ir.pooyadev.domain.usecases.local.FetchTasksUseCase
 import ir.pooyadev.domain.usecases.local.InsertTaskUseCase
+import ir.pooyadev.domain.usecases.local.SyncTasksUseCase
 import ir.pooyadev.domain.usecases.local.UpdateTaskUseCase
 
 @Module
@@ -38,6 +39,11 @@ object TaskUseCasesModule {
     @Provides
     fun provideDeleteTaskUseCase(taskRepository: TaskRepository): DeleteTaskUseCase {
         return DeleteTaskUseCase(taskRepository)
+    }
+
+    @Provides
+    fun provideSyncTasksUseCase(taskRepository: TaskRepository): SyncTasksUseCase {
+        return SyncTasksUseCase(taskRepository)
     }
 
 }
