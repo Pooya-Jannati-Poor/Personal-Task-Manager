@@ -5,10 +5,11 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import ir.pooyadev.domain.repository.local.TaskRepository
+import ir.pooyadev.domain.repository.local.UserPreferencesRepository
 import ir.pooyadev.domain.usecases.local.DeleteTaskUseCase
 import ir.pooyadev.domain.usecases.local.FetchTasksByTaskIdUseCase
 import ir.pooyadev.domain.usecases.local.FetchTasksUseCase
-import ir.pooyadev.domain.usecases.local.InsertTaskUseCase
+import ir.pooyadev.domain.usecases.local.FetchSortedTasksFirstUseCase
 import ir.pooyadev.domain.usecases.local.SyncTasksUseCase
 import ir.pooyadev.domain.usecases.local.UpdateTaskUseCase
 
@@ -17,8 +18,8 @@ import ir.pooyadev.domain.usecases.local.UpdateTaskUseCase
 object TaskUseCasesModule {
 
     @Provides
-    fun provideInsertTaskUseCase(taskRepository: TaskRepository): InsertTaskUseCase {
-        return InsertTaskUseCase(taskRepository)
+    fun provideInsertTaskUseCase(taskRepository: TaskRepository): InsertOrUpdateTaskUseCase {
+        return InsertOrUpdateTaskUseCase(taskRepository)
     }
 
     @Provides
