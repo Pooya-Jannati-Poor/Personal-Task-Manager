@@ -40,36 +40,6 @@
 
             </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:hint="@string/task_title"
-                android:textColorHint="@color/slate_gray"
-                android:textSize="14sp"
-                app:boxCornerRadiusBottomEnd="8dp"
-                app:boxCornerRadiusBottomStart="8dp"
-                app:boxCornerRadiusTopEnd="8dp"
-                app:boxCornerRadiusTopStart="8dp"
-                app:boxStrokeColor="@color/text_input_stroke_color"
-                app:boxStrokeWidth="1dp"
-                app:hintEnabled="false">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_round_corner_gray_stroke"
-                    android:drawableStart="@drawable/ic_search"
-                    android:drawablePadding="8dp"
-                    android:hint="@string/search_your_note_hint"
-                    android:paddingHorizontal="12dp"
-                    android:paddingVertical="16dp"
-                    android:textColor="@color/gunmetal_blue"
-                    android:textColorHint="@color/slate_gray"
-                    android:textSize="14sp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
 
             <FrameLayout
                 android:layout_width="match_parent"
